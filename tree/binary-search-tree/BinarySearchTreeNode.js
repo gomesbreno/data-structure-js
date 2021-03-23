@@ -1,7 +1,7 @@
 const BinaryTreeNode = require("../BinaryTreeNode");
 const Comparator = require("../../utils/Comparator");
 
-class BinarySearchTreeNode extends BinaryTreeNode {
+module.exports = class BinarySearchTreeNode extends BinaryTreeNode {
   /**
    * @param {*} [value] - node value.
    * @param {function} [compareFunction] - comparator function for node values.
@@ -148,6 +148,4 @@ class BinarySearchTreeNode extends BinaryTreeNode {
 
     return this.left.findMin();
   }
-}
-
-module.exports = BinarySearchTreeNode;
+};

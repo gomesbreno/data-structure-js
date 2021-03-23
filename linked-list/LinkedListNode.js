@@ -1,4 +1,4 @@
-class LinkedListNode {
+module.exports = class LinkedListNode {
   constructor(value, next = null) {
     this.value = value;
     this.next = next;
@@ -7,6 +7,4 @@ class LinkedListNode {
   toString(callback) {
     return callback ? callback(this.value) : `${this.value}`;
   }
-}
-
-module.exports = LinkedListNode;
+};

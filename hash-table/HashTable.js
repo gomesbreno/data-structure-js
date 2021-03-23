@@ -6,7 +6,7 @@ const LinkedList = require("../linked-list/LinkedList");
 // are being handled.
 const defaultHashTableSize = 32;
 
-class HashTable {
+module.exports = class HashTable {
   /**
    * @param {number} hashTableSize
    */
@@ -127,6 +127,4 @@ class HashTable {
       return values.concat(bucketValues);
     }, []);
   }
-}
-
-module.exports = HashTable;
+};

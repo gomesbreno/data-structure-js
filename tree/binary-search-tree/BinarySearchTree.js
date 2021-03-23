@@ -1,6 +1,6 @@
 const BinarySearchTreeNode = require("./BinarySearchTreeNode");
 
-class BinarySearchTree {
+module.exports = class BinarySearchTree {
   /**
    * @param {function} [nodeValueCompareFunction]
    */
@@ -55,6 +55,4 @@ class BinarySearchTree {
   toStringInLevelOrder() {
     return this.root.toStringInLevelOrder();
   }
-}
-
-module.exports = BinarySearchTree;
+};

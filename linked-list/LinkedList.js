@@ -1,7 +1,7 @@
 const LinkedListNode = require("./LinkedListNode");
 const Comparator = require("../utils/Comparator");
 
-class LinkedList {
+module.exports = class LinkedList {
   /**
    * @param {Function} [comparatorFunction]
    */
@@ -237,6 +237,4 @@ class LinkedList {
 
     return this;
   }
-}
-
-module.exports = LinkedList;
+};

@@ -1,7 +1,7 @@
 const Comparator = require("../utils/Comparator");
-const HashTable = require("../hash-table/HashTable");
+// const HashTable = require("../hash-table/HashTable");
 
-class BinaryTreeNode {
+module.exports = class BinaryTreeNode {
   /**
    * @param {*} [value] - node value.
    */
@@ -12,7 +12,7 @@ class BinaryTreeNode {
     this.value = value;
 
     // Any node related meta information may be stored here.
-    this.meta = new HashTable();
+    // this.meta = new HashTable();
 
     // This comparator is used to compare binary tree nodes with each other.
     this.nodeComparator = new Comparator();
@@ -246,6 +246,4 @@ class BinaryTreeNode {
   toStringInLevelOrder() {
     return this.traverseInLevelOrder().toString();
   }
-}
-
-module.exports = BinaryTreeNode;
+};
