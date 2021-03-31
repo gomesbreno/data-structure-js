@@ -129,6 +129,7 @@ function contacts(queries) {
   return resultsOfSearchsOnList;
 }
 
+/*
 // buscar contatos com a substring de busca com complexidade O(1)
 function contacts2(queries) {
   const resultsOfSearchsOnList = [];
@@ -172,7 +173,59 @@ queries = [
 ];
 const results = contacts2(queries);
 console.log(results.join("\n") + "\n");
+*/
 
-// stringfy
-// split
-// lenght
+//encriptação
+/*
+const stringToEncode = "aaaabbccceedfsttteerrsvvvlleeooeidffggg";
+const encode = (encodeString) => {
+  let currentChar = "";
+  let currentCharCountOnsequence = 0;
+  let encodedString = "";
+
+  for (let index = 0; index < encodeString.length; index++) {
+    switch (true) {
+      case currentChar === "":
+        currentChar = encodeString[index];
+        currentCharCountOnsequence += 1;
+        break;
+
+      case currentChar === encodeString[index]:
+        currentCharCountOnsequence += 1;
+        if (index === encodeString.length - 1) {
+          encodedString += `${currentCharCountOnsequence}${currentChar}`;
+        }
+        break;
+
+      default:
+        encodedString += `${currentCharCountOnsequence}${currentChar}`;
+        currentChar = encodeString[index];
+        currentCharCountOnsequence = 1;
+        if (index === encodeString.length - 1) {
+          encodedString += `${currentCharCountOnsequence}${currentChar}`;
+        }
+        break;
+    }
+  }
+  return encodedString;
+};
+
+const encodedString = encode(stringToEncode);
+console.log(encodedString);
+*/
+
+// fibonacci with memoize solution
+const memo = [];
+function fibonacci(n) {
+  if (memo[n]) {
+    return memo[n];
+  }
+  if (n === 1 || n === 2) {
+    return 1;
+  }
+  const result = fibonacci(n - 1, memo) + fibonacci(n - 2, memo);
+  memo[n] = result;
+  return result;
+}
+
+console.log(fibonacci(99));
